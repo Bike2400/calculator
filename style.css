@@ -1,0 +1,36 @@
+body{
+    display: flex;
+}
+
+.container{
+    max-width: 400px;
+  border-radius: 3px;
+ background-color: blueviolet;
+    margin: 10vh auto 0 auto;
+    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+}
+
+#display{
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 10px 5px;
+    font-size: 25px;
+    border: 1px solid burlywood;
+    margin: 20px;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 14px;
+}
+
+.button{
+    font-size: 25px;
+    text-align: center;
+  padding: 6px;
+  margin: 6px;
+  width: 80px;
+  border: 1px solid burlywood;
+}
