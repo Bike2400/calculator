@@ -54,13 +54,29 @@ function evaluate(){
         previousNum -= currentNum;
     }
     else if (operator === '/'){
+        if(currentNum <= 0){
+            previousNum = 'Error';
+            displayResults();
+            return;
+        }
         previousNum /= currentNum;
     }
     else if (operator === 'x'){
         previousNum *= currentNum;
     }
+    previousNum = previousNum.toString();
+    displayResults();
+
+
+}
+
+function displayResults() {
     previousDisplayNumber.textContent = '';
-    currentDisplayNumber.textContent = previousNum;
-
-
+    operator = '';
+    if(previousNum.length <= 11){
+        currentDisplayNumber.textContent = previousNum;
+    }
+    else{
+        currentDisplayNumber.textContent = previousNum.slice(0,11) + '...';
+    }
 }
