@@ -10,13 +10,24 @@ body{
 }
 
 #display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     text-align: right;
     height: 70px;
     line-height: 70px;
-    padding: 10px 5px;
+    padding: 16px 6px;
     font-size: 25px;
     border: 1px solid burlywood;
     margin: 20px;
+    background-color: azure;
+}
+
+.previousNumber{
+padding: 3px;
+margin: 3px;
+color:lightslategrey;
 }
 
 .buttons{
