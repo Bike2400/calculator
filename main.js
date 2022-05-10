@@ -5,6 +5,8 @@ let operator = '';
 const currentDisplayNumber = document.querySelector('.currentNumber');
 const previousDisplayNumber = document.querySelector('.previousNumber');
 
+window.addEventListener('keydown',enableKeyBoard);
+
 const equal = document.querySelector('#equal');
 equal.addEventListener('click',() =>{
     if(currentNum != '' && previousNum != '' ){
@@ -129,4 +131,40 @@ function addDecimal(){
         currentNum += '.';
         currentDisplayNumber.textContent = currentNum;
     }
+}
+
+function enableKeyBoard(e){
+    e.preventDefault();
+    if(e.key >= 0 && e.key <=9){
+        displayNumber(e.key);
+    }
+    if(e.key === 'Enter' || 
+      (e.key === "=" && previousNum != '' && currentNum != '')){
+        evaluate();
+    }
+    if(e.key === '+' || e.key === '-' || e.key === '/'){
+        displayOperator(e.key)
+    }
+    if(e.key === '*'){
+        displayOperator('x');
+    }
+    if(e.key === '.'){
+        addDecimal();
+    }
+    if(e.key === 'Backspace'){
+        if(currentNum != ''){
+            currentNum = currentNum.slice(0,-1);
+            currentDisplayNumber.textContent = currentNum;
+            if(currentNum = ''){
+                currentDisplayNumber.textContent = 0;
+            }
+        }
+        if(currentNum == '' && previousNum != '' && operator == ''){
+            previousNum = previousNum.slice(0,-1);
+            currentDisplayNumber.textContent = previousNum;
+        }
+
+    }
+
+
 }
