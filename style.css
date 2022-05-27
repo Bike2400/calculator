@@ -1,11 +1,12 @@
 body{
     display: flex;
+    background-color:antiquewhite ;
 }
 
 .container{
     max-width: 300px;
     background-color: crimson;
-  border-radius: 3px;
+    border-radius: 15px;
     margin: 10vh auto 0 auto;
     box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
 }
@@ -21,15 +22,14 @@ body{
     line-height: 70px;
     padding: 16px 6px;
     font-size: 25px;
-    border: 1px solid burlywood;
+    border: 1px solid black;
     margin: 20px;
     background-color: azure;
 }
 
 .previousNumber{
-padding: 3px;
-margin: 3px;
-color:lightslategrey;
+    margin: 3px;
+    color:lightslategrey;
 }
 
 .buttons{
@@ -39,15 +39,15 @@ color:lightslategrey;
     padding: 14px;
 }
 
-.button{
-    background-color: cyan;
-    font-size: 25px;
-    text-align: center;
+.button{ 
+  background-color: cyan;
+  font-size: 25px;
+  text-align: center;
   padding: 6px;
   margin: 6px;
   width: 60px;
   border-radius: 2px;
-  border: 1px solid burlywood;
+  border: 1px solid burlywood;  
 }
 
 #equal{
